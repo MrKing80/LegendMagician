@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fe5c0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 26fbffff
       m_RenameOverlay:
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 56
-  m_LastProjectPath: "C:\\Users\\s20237021\\Desktop\\4\u4F5C\u54C1\u76EE\\Magician_Legend"
+  m_LastProjectPath: "C:\\Users\\s20237021\\Desktop\\4\u4F5C\u54C1\u76EE\\LegendMagician"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
