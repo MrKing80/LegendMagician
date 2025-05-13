@@ -1,10 +1,12 @@
 using UnityEngine;
 
 /// <summary>
+/// 制作者：玉井
+/// 
 /// プレイヤーの動作を管理するクラス。
 /// </summary>
 
-public class Player_T : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     [SerializeField, Header("移動スピード")] private float _speed = 0f;
     private Vector3 _position = Vector3.zero;
@@ -12,13 +14,11 @@ public class Player_T : MonoBehaviour
 
     private void Start()
     {
-        
+        _rb = this.GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        // プレイヤーの攻撃に関する入力処理
-
         // 現在の位置を取得し、物理的に一定速度で移動。
         _rb.MovePosition(_rb.position + _position * _speed * Time.fixedDeltaTime);
     }
