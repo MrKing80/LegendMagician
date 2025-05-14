@@ -2,9 +2,12 @@ using UnityEngine;
 
 /// <summary>
 /// プレイヤークラスを管理するクラス
-/// 制作者：玉井朱音
+/// 制作者：玉井
 /// </summary>
-public class PlayerClass
+public class PlayerClass: BaceCharacter
 {
+    public void PlayerStatus()
+    {
 
+    }
 }

@@ -1,9 +1,8 @@
 using UnityEngine;
 
 /// <summary>
-/// 制作者：玉井
-/// 
 /// プレイヤーの動作を管理するクラス。
+/// 制作者：玉井
 /// </summary>
 
 public class PlayerMove : MonoBehaviour
