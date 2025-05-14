@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 /// <summary>
 /// “G‚ÌƒNƒ‰ƒX
@@ -5,13 +6,12 @@ using UnityEngine;
 /// </summary>
 public class EnemyClass : BaceCharacter
 {
-    private string _enemyName = "";
-    private int _hp = 0;
-    private float _attackPower = 0f;
-    private float _attackSpeed = 0f;
-    private float _moveSpeed = 0f;
+    [SerializeField] private EnemyData _enemyData = default;
 
-
+    private void Start()
+    {
+        print(_enemyData.HP);
+    }
 
     public override bool IsAlive()
     {
