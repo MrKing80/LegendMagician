@@ -15,6 +15,13 @@ public abstract class BaceCharacter : MonoBehaviour
     protected bool _isAlive = true;
     //後で属性の情報を格納する変数を書き足す
 
+    private void Start()
+    {
+        print("炎魔法を呼び出します");
+        PlayerClass playerClass = new PlayerClass();
+        FireAttack fireAttack = new FireAttack();
+    }
+
     /// <summary>
     /// 生存判定用メソッド
     /// abstractは継承したら絶対このメソッドを使ってねという意味になるよ
