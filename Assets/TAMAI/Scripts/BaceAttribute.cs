@@ -1,0 +1,14 @@
+using UnityEngine;
+
+public abstract class BaceAttribute : MonoBehaviour
+{
+
+    public BaceAttribute(int a)
+    {
+        var B = a;
+    }
+    // éqÉNÉâÉXÇ≈åpè≥Ç∑ÇÈ
+    protected abstract string AttributeName();
+    protected abstract float MagicAttackPower();
+
+}

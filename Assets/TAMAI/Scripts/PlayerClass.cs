@@ -5,7 +5,7 @@ using UnityEngine;
 /// プレイヤークラスを管理するクラス
 /// 制作者：玉井
 /// </summary>
-public class PlayerClass : BaceCharacter
+public  class PlayerClass : BaceCharacter
 {
     private string _playerName = "";
     private int _hp = 0;
@@ -13,15 +13,17 @@ public class PlayerClass : BaceCharacter
     private float _attackSpeed = 0f;
     private float _moveSpeed = 0f;
 
-    // 子クラスで継承する
-    protected abstract string MagicName();
-    protected abstract float MagicAttackPower();
-
-
-    public string Attack()
+    private void Start()
     {
-        return $"{MagicName()}攻撃を取得した！プレイヤーは{MagicName()}攻撃をの攻撃力は{MagicAttackPower()}だ！";
+        print("炎魔法を呼び出します");
+        PlayerClass playerClass = new PlayerClass();
+        FireAttack fireAttack = new FireAttack(2);
     }
+
+    //public string Attack()
+    //{
+    //    
+    //}
 
     /// <summary>
     ///  生存判定用メソッド
