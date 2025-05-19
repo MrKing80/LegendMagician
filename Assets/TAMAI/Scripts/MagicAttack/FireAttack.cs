@@ -3,20 +3,16 @@ using System;
 
 public class FireAttack : BaceAttribute
 {
-    public FireAttack(int a):base(a)
+    private string _attributeName = "";
+
+    public FireAttack(string attributeName)
     {
-        print($"{AttributeName()}攻撃を取得した！プレイヤーは{AttributeName()}攻撃をの攻撃力は{MagicAttackPower()}だ！");
-        print("ステージが燃えた！");
+        _attributeName = attributeName;
     }
 
-    protected override string AttributeName()
+    protected override void AttributeCharacteristics()
     {
-        return "炎";
+        //TODO : 炎上ダメージの処理を書く
+        //TODO : 着弾したところの地面を燃やすの処理を書く.
     }
-
-    protected override float MagicAttackPower()
-    {
-        return 10f;
-    }
-
 }

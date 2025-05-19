@@ -17,7 +17,7 @@ public  class PlayerClass : BaceCharacter
     {
         print("‰Š–‚–@‚ğŒÄ‚Ño‚µ‚Ü‚·");
         PlayerClass playerClass = new PlayerClass();
-        FireAttack fireAttack = new FireAttack(2);
+        FireAttack fireAttack = new FireAttack();
     }
 
     //public string Attack()
