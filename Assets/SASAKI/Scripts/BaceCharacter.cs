@@ -1,4 +1,3 @@
-using System.Net.NetworkInformation;
 using UnityEngine;
 
 /// <summary>
@@ -12,6 +11,7 @@ public abstract class BaceCharacter : MonoBehaviour
     protected float _attackPower = 0f;
     protected float _attackSpeed = 0f;
     protected float _moveSpeed = 0f;
+    private int _characterId = 0;
     protected bool _isAlive = true;
     // TODO : Œã‚Å‘®«‚Ìî•ñ‚ğŠi”[‚·‚é•Ï”‚ğ‘‚«‘«‚·
 

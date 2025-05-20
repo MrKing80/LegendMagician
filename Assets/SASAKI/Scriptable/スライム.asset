@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fecb91f908c814a927e6f95791ad54, type: 3}
   m_Name: "\u30B9\u30E9\u30A4\u30E0"
   m_EditorClassIdentifier: 
+  _enemyID: 1
   _enemyName: "\u30B9\u30E9\u30A4\u30E0"
   _enemyHp: 10
   _attackPower: 5
