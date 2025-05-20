@@ -5,13 +5,11 @@ using UnityEngine;
 /// </summary>
 public class EnemyClass : BaceCharacter
 {
-    private string _enemyName = "";
-    private int _hp = 0;
-    private float _attackPower = 0f;
-    private float _attackSpeed = 0f;
-    private float _moveSpeed = 0f;
-
-
+    public EnemyClass(string enemyName, int hp, float attackPower, float attackSpeed, float moveSpeed)
+        :base(enemyName,hp,attackPower,attackSpeed,moveSpeed) 
+    {
+        //‚±‚±‚É“G‚Ì‰Šú‰»ˆ—‚ğ‘‚­
+    }
 
     public override bool IsAlive()
     {
