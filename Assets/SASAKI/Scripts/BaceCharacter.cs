@@ -13,11 +13,20 @@ public abstract class BaceCharacter : MonoBehaviour
     protected float _attackSpeed = 0f;
     protected float _moveSpeed = 0f;
     protected bool _isAlive = true;
-    //後で属性の情報を格納する変数を書き足す
+    // TODO : 後で属性の情報を格納する変数を書き足す
+
+    public BaceCharacter(string playerName, int hp, float attackPower, float attackSpeed, float moveSpeed)
+    {
+        _characterName = playerName;
+        _hp = hp;
+        _attackPower = attackPower;
+        _attackSpeed = attackSpeed;
+        _moveSpeed = moveSpeed;
+    }
 
     /// <summary>
     /// 生存判定用メソッド
-    /// abstractは継承したら絶対このメソッドを使ってねという意味になるよ
+    /// ※ abstractは継承したら絶対このメソッドを使ってねという意味になるよ
     /// </summary>
     /// <returns>true：生きてる false：死んでる</returns>
     public abstract bool IsAlive();
