@@ -7,23 +7,11 @@ using UnityEngine;
 /// </summary>
 public  class PlayerClass : BaceCharacter
 {
-    private string _playerName = "";
-    private int _hp = 0;
-    private float _attackPower = 0f;
-    private float _attackSpeed = 0f;
-    private float _moveSpeed = 0f;
-
-    private void Start()
+    public PlayerClass(string playerName,int hp, float attackPower, float attackSpeed, float moveSpeed)
+        :base(playerName, hp, attackPower, attackSpeed, moveSpeed)
     {
-        print("炎魔法を呼び出します");
-        PlayerClass playerClass = new PlayerClass();
-        FireAttack fireAttack = new FireAttack();
+        //ここにプレイヤーの初期化を書こう
     }
-
-    //public string Attack()
-    //{
-    //    
-    //}
 
     /// <summary>
     ///  生存判定用メソッド
