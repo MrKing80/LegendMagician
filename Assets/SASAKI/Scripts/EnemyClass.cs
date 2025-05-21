@@ -5,14 +5,5 @@ using UnityEngine;
 /// </summary>
 public class EnemyClass : BossEnemyClass
 {
-    public EnemyClass(string enemyName, int hp, float attackPower, float attackSpeed, float moveSpeed)
-        :base(enemyName,hp,attackPower,attackSpeed,moveSpeed)
-    {
-        //‚±‚±‚É“G‚Ì‰Šú‰»ˆ—‚ğ‘‚­
-    }
 
-    public override bool IsAlive()
-    {
-        return _isAlive;
-    }
 }

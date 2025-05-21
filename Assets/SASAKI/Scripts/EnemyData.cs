@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Enemy_DataBase")]
+[CreateAssetMenu(menuName = "Scriptable Objects/Enemy_DataBase")]
 public class EnemyData : ScriptableObject
 {
     [Header("敵のステータス")]
