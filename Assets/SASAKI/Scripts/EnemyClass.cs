@@ -1,6 +1,6 @@
 using UnityEngine;
 /// <summary>
-/// 敵のクラス
+/// 敵の中心となるクラス
 /// 作成者：佐々木
 /// </summary>
 public class EnemyClass : BossEnemyClass
