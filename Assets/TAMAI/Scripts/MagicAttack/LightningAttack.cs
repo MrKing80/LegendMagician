@@ -10,6 +10,7 @@ public class LightningAttack : BaceAttribute
     public LightningAttack(string attributeName) : base(attributeName)
     {
         //ここにこのスクリプトの初期化処理を書こう
+        attributeName = $"雷攻撃";
     }
 
     protected override void AttributeCharacteristics()
