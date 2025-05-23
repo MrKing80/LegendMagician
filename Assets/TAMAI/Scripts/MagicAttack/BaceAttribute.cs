@@ -4,10 +4,10 @@ using UnityEngine;
 /// 属性のベースクラス
 /// 作成者:佐々木
 /// </summary>
-public abstract class BaceAttribute : MonoBehaviour
+public abstract class BaceAttribute
 {
     private string _attributeName = "";
-    
+
     public string AttributeName
     {
         get { return _attributeName; }

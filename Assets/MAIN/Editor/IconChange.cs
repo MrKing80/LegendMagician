@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 // ScriptableIconクラスに対応したカスタムInspectorを作る宣言
-[CustomEditor(typeof(ScriptableIcon))]
+[CustomEditor(typeof(SkillData))]
 // エディタ上での見た目や動作をカスタマイズするためのクラス
 public class IconChange : Editor
 {
@@ -21,9 +21,9 @@ public class IconChange : Editor
      )
     {
         // 編集対象のオブジェクトをScriptableIcon型に変換
-        ScriptableIcon obj = target as ScriptableIcon;
+        SkillData obj = target as SkillData;
         // ScriptableIconクラス内のicon変数を取得
-        Sprite icon = obj.icon;
+        Sprite icon = obj.Icon;
 
         // もしアイコンが設定されていなければ
         if (icon == null)
@@ -52,9 +52,3 @@ public class IconChange : Editor
     }
 }
 #endif
-
-[CreateAssetMenu]
-public class ScriptableIcon : ScriptableObject
-{
-    public Sprite icon;
-}

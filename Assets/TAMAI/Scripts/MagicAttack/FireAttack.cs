@@ -7,10 +7,11 @@ using System;
 /// </summary>
 public class FireAttack : BaceAttribute
 {
-
+    private string _name = "";
     public FireAttack(string attributeName):base(attributeName)
     {
         //ここにこのスクリプトの初期化処理を書こう
+        _name = attributeName;
     }
 
     protected override void AttributeCharacteristics()

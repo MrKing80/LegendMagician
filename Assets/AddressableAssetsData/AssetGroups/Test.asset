@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  m_GroupName: Test
+  m_GUID: d0fc50c1436401e498c913f3fb095cfb
+  m_SerializeEntries:
+  - m_GUID: 1f3e36037ff82ce46a03e004f4cbf652
+    m_Address: Fire
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e598dc4e186a0847a2b2dbec8a3131e
+    m_Address: Ice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e0c6ba02da284048b5c55c47972fcea
+    m_Address: EnemyDataBase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fff65b3855e9a574e805276e847bdaf6
+    m_Address: Skill Data Base
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ba063865b11ce8144ba591dc2f423fd4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 80d32166c15176444bf809bf59d2a3fd, type: 2}
+    - {fileID: 11400000, guid: 2d2a1dd574170494da7f322e7006cc50, type: 2}
+    - {fileID: 11400000, guid: badddbe6248d1994e8413451dbdc9a4d, type: 2}
+    - {fileID: 11400000, guid: 92e9bdd97ba921f40b608f56ff3cf666, type: 2}

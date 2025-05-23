@@ -10,10 +10,15 @@ public  class PlayerController : MonoBehaviour
 {
     [SerializeField, Header("ステータス")] private PlayerStatus _playerStatus = default;
     private PlayerMove _playerMove = default;
+    private BaceAttribute _baceAttribute = default;
+
     private Rigidbody _rb = default;
+
     private string _name = "";
+
     private int _currentHp = 0;
     private int _maxHp = 0;
+
     private float _attackPower = 0f;
     private float _attackSpeed = 0f;
     private float _moveSpeed = 0f;
@@ -34,6 +39,7 @@ public  class PlayerController : MonoBehaviour
         _attackSpeed = _playerStatus.AttackSpeed;
         _moveSpeed = _playerStatus.MoveSpeed;
         _playerMove = new PlayerMove(_moveSpeed, _rb);
+        _baceAttribute = new FireAttack("炎");
     }
 
     private void FixedUpdate()
@@ -45,5 +51,8 @@ public  class PlayerController : MonoBehaviour
     {
         // プレイヤーの移動に関する入力処理
         _playerMove.HandleInput();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            Debug.Log($"{_baceAttribute.AttributeName}魔法発動！");
     }
 }

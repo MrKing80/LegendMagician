@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Scriptable Icon 1
-  m_EditorClassIdentifier: Assembly-CSharp-Editor::ScriptableIcon
-  icon: {fileID: 21300000, guid: 19e0293859de3f64ea19427f7572593a, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6f7d8154c2c1743b58db75cc28cb90, type: 3}
+  m_Name: PlayAssetDeliveryInitializationSettings
+  m_EditorClassIdentifier: 
+  m_Data:
+    m_LogWarnings: 1
