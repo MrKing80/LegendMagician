@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba72ca843da643469a1a52477925ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDataBase: {fileID: 0}
+  _enemyDataBase: {fileID: 11400000, guid: 6e0c6ba02da284048b5c55c47972fcea, type: 2}
   _enemyID: 0
