@@ -15,13 +15,18 @@ MonoBehaviour:
   m_GroupName: Test
   m_GUID: d0fc50c1436401e498c913f3fb095cfb
   m_SerializeEntries:
+  - m_GUID: 088774f5d51f82b4198fd472e93cf61d
+    m_Address: DataBaseManager
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f3e36037ff82ce46a03e004f4cbf652
     m_Address: Fire
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e598dc4e186a0847a2b2dbec8a3131e
-    m_Address: Ice
+    m_Address: Water
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -31,7 +36,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fff65b3855e9a574e805276e847bdaf6
-    m_Address: Skill Data Base
+    m_Address: SkillDataBase
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

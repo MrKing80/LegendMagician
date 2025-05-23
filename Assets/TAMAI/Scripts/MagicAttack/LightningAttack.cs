@@ -6,11 +6,12 @@ using UnityEngine;
 /// </summary>
 public class LightningAttack : BaceAttribute
 {
+    private string _name = "";
 
     public LightningAttack(string attributeName) : base(attributeName)
     {
         //ここにこのスクリプトの初期化処理を書こう
-        attributeName = $"雷攻撃";
+        _name = attributeName;
     }
 
     protected override void AttributeCharacteristics()

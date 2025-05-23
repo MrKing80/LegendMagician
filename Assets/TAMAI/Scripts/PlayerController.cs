@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 /// プレイヤークラスを管理するクラス
 /// 制作者：玉井
 /// </summary>
-public  class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IAttackable
 {
     [SerializeField, Header("ステータス")] private PlayerStatus _playerStatus = default;
     private PlayerMove _playerMove = default;
@@ -54,5 +54,13 @@ public  class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             Debug.Log($"{_baceAttribute.AttributeName}魔法発動！");
+    }
+
+    public void Attack(IDamageable target)
+    {
+        // 殴る処理
+        //一番近い敵を探索
+        //一番近い敵に一定間隔で攻撃→コルーチン
+
     }
 }

@@ -18,5 +18,6 @@ public class FireAttack : BaceAttribute
     {
         //TODO : 炎上ダメージの処理を書く
         //TODO : 着弾したところの地面を燃やすの処理を書く
+
     }
 }

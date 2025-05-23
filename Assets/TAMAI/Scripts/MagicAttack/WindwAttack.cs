@@ -6,10 +6,12 @@ using UnityEngine;
 /// </summary>
 public class WindwAttack : BaceAttribute
 {
+    private string _name = "";
 
     public WindwAttack(string attributeName) : base(attributeName)
     {
         //ここにこのスクリプトの初期化処理を書こう
+        _name = attributeName;
     }
 
     protected override void AttributeCharacteristics()

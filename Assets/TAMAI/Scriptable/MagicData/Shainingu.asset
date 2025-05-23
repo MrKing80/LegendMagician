@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cb461fd5858c4f4292b7aff5bb0c485, type: 3}
-  m_Name: Ice
+  m_Name: Shainingu
   m_EditorClassIdentifier: 
-  _icon: {fileID: 21300000, guid: 19e0293859de3f64ea19427f7572593a, type: 3}
-  _id: 2
-  _name: "\u6C34"
+  _icon: {fileID: 21300000, guid: a76c9d253d34eb645a9433488a0bb4d4, type: 3}
+  _id: 0
+  _name: "\u5149"
