@@ -5,33 +5,30 @@ using UnityEngine;
 /// 制作者：玉井
 /// </summary>
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove
 {
-    [SerializeField, Header("移動スピード")] private float _speed = 0f;
+    // 移動スピード
+    private float _speed = 0f;
     private Vector3 _position = Vector3.zero;
-    private Rigidbody _rb;
+    private Rigidbody _rb = default;
 
-    private void Start()
+    public PlayerMove(float speed, Rigidbody rb)
     {
-        _rb = this.GetComponent<Rigidbody>();
+        // 初期化処理
+        _speed = speed;
+        _rb = rb;
     }
 
-    private void FixedUpdate()
+    public void PlayerMoving()
     {
         // 現在の位置を取得し、物理的に一定速度で移動。
-        _rb.MovePosition(_rb.position + _position * _speed * Time.fixedDeltaTime);
-    }
-
-    private void Update()
-    {
-        // プレイヤーの移動に関する入力処理
-        HandleInput();
+        _rb.MovePosition(_rb.position + _speed * Time.fixedDeltaTime * _position);
     }
 
     /// <summary>
     /// プレイヤーの移動入力を処理
     /// </summary>
-    private void HandleInput()
+    public void HandleInput()
     {
         // 入力処理をUpdateで行い、物理演算と分離し最適化
         _position.x = Input.GetAxisRaw("Horizontal");
