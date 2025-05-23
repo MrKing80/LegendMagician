@@ -8,7 +8,8 @@ using UnityEngine.UIElements;
 /// </summary>
 public  class PlayerController : MonoBehaviour
 {
-    private Rigidbody _rb;
+    [SerializeField, Header("移動スピード")] private float _speed = 0f;
+    private Rigidbody _rb = default;
     private PlayerMove _playerMove = default;
 
     public PlayerController(string attributeName)
@@ -18,8 +19,7 @@ public  class PlayerController : MonoBehaviour
     private void Start()
     {
         _rb = this.GetComponent<Rigidbody>();
-        _playerMove = new PlayerMove(_rb);
-
+        _playerMove = new PlayerMove(_speed, _rb);
     }
 
     private void FixedUpdate()

@@ -7,13 +7,15 @@ using UnityEngine;
 
 public class PlayerMove
 {
-    [SerializeField, Header("移動スピード")] private float _speed = 0f;
+    // 移動スピード
+    private float _speed = 0f;
     private Vector3 _position = Vector3.zero;
-    private Rigidbody _rb;
+    private Rigidbody _rb = default;
 
-    public PlayerMove(Rigidbody rb)
+    public PlayerMove(float speed, Rigidbody rb)
     {
         // 初期化処理
+        _speed = speed;
         _rb = rb;
     }
 
