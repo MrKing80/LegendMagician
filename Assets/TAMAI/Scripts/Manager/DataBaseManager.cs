@@ -24,16 +24,16 @@ public class DataBaseManager : MonoBehaviour
             Instance = this;
             // シーンを跨いでも設定を保持できる
             DontDestroyOnLoad(this.gameObject);
-
-            // データベースを非同期で取得
-            _enemyDataBase = await LoadEnemyDataBase(_enemyDataBaseName);
-            _skillDataBase = await LoadSkillDataBase(_skillDataBaseName);
         }
         else
         {
             // 自分以外の自分がいた場合、自らを消す
             Destroy(this.gameObject);
         }
+
+        // データベースを非同期で取得
+        _enemyDataBase = await LoadEnemyDataBase(_enemyDataBaseName);
+        _skillDataBase = await LoadSkillDataBase(_skillDataBaseName);
     }
 
     #region エネミー
