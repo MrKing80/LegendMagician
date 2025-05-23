@@ -8,16 +8,16 @@ using UnityEngine;
 public class BossEnemyClass : MonoBehaviour, IAttackable, IDamageable
 {
     //スクリプタブルオブジェクトからステータスを持ってきたい
-    [SerializeField] private EnemyDataBase _enemyDataBase = default;
-    [SerializeField, Range(0, 5)] private int _enemyID = 0;
-    private EnemyData _enemyData = default;
-    private EnemyMove _enemyMove = default;
-    private GameObject _player = default;
+    [SerializeField] protected EnemyDataBase _enemyDataBase = default;
+    [SerializeField, Range(0, 5)] protected int _enemyID = 0;
+    protected EnemyData _enemyData = default;
+    protected EnemyMove _enemyMove = default;
+    protected GameObject _player = default;
 
-    private int _maxHp = 0;
-    private int _currentHp = 0;
+    protected int _maxHp = 0;
+    protected int _currentHp = 0;
 
-    private bool _isAlive = true;
+    protected bool _isAlive = true;
 
     /// <summary>
     /// 主に初期化処理、インスタンス生成をするメソッド

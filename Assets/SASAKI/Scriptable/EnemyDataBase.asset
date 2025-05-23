@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc80d836b11d0b4bbc6cd833eecf710, type: 3}
   m_Name: EnemyDataBase
   m_EditorClassIdentifier: 
-  _enemyData:
+  _enemyDatas:
   - {fileID: 11400000, guid: 9307e70cec6061d4b9e4cc176026a442, type: 2}
-  - {fileID: 11400000, guid: b0edd22f860585541b05b26b17f018fb, type: 2}
-  - {fileID: 11400000, guid: b0edd22f860585541b05b26b17f018fb, type: 2}
   - {fileID: 11400000, guid: b0edd22f860585541b05b26b17f018fb, type: 2}
