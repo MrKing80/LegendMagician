@@ -1,6 +1,3 @@
-using UnityEngine;
-using System;
-
 /// <summary>
 /// 炎属性の攻撃クラス
 /// 作成者：佐々木

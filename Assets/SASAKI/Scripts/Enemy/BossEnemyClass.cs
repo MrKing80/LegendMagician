@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -31,6 +30,11 @@ public class BossEnemyClass : MonoBehaviour, IAttackable, IDamageable
         _maxHp = _currentHp = _enemyData.HP;
 
         _enemyMove = new EnemyMove(_enemyData.MoveSpeed, _player);
+    }
+
+    protected void Update()
+    {
+        _enemyMove.EnemyMoving();
     }
 
     /// <summary>
