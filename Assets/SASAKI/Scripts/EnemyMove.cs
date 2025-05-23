@@ -9,7 +9,7 @@ public class EnemyMove
     private GameObject _player = default;
     private float _moveSpeed = 0;
 
-    public EnemyMove(float moveSpeed,GameObject _player)
+    public EnemyMove(float moveSpeed, GameObject player)
     {
         _moveSpeed = moveSpeed;
     }

@@ -4,5 +4,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyDataBase", menuName = "Scriptable Objects/EnemyDataBase")]
 public class EnemyDataBase : ScriptableObject
 {
-    public List<EnemyData> _enemyData = new List<EnemyData>();
+    public List<EnemyData> _enemyDatas = new List<EnemyData>();
 }

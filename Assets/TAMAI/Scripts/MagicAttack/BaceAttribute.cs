@@ -6,7 +6,6 @@ using UnityEngine;
 /// </summary>
 public abstract class BaceAttribute : MonoBehaviour
 {
-    //プロパティにしよう
     private string _attributeName = "";
     
     public string AttributeName

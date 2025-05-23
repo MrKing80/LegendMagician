@@ -5,22 +5,67 @@ using UnityEngine;
 /// ボス敵の中心となるクラス
 /// 作成者：佐々木
 /// </summary>
-public class BossEnemyClass : MonoBehaviour
+public class BossEnemyClass : MonoBehaviour, IAttackable, IDamageable
 {
-    private int _hp = 0;
+    //スクリプタブルオブジェクトからステータスを持ってきたい
+    [SerializeField] private EnemyDataBase _enemyDataBase = default;
+    [SerializeField, Range(0, 5)] private int _enemyID = 0;
+    private EnemyData _enemyData = default;
+    private EnemyMove _enemyMove = default;
     private GameObject _player = default;
 
+    private int _maxHp = 0;
+    private int _currentHp = 0;
+
+    private bool _isAlive = true;
+
+    /// <summary>
+    /// 主に初期化処理、インスタンス生成をするメソッド
+    /// </summary>
+    private void Awake()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+
+        _enemyData = _enemyDataBase._enemyDatas[_enemyID];
+
+        _maxHp = _currentHp = _enemyData.HP;
+
+        _enemyMove = new EnemyMove(_enemyData.MoveSpeed, _player);
+    }
 
     /// <summary>
     /// ダメージを受ける処理
     /// </summary>
     /// <param name="damage">受けるダメージ量</param>
-    /// <returns>ダメージを受けた後のHP</returns>
-    public virtual int TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
-        _hp -= damage;
-
-        return _hp;
+        //ここにダメージを受ける処理
+        _currentHp -= damage;
     }
 
+    /// <summary>
+    /// 攻撃を行うメソッド
+    /// </summary>
+    /// <param name="target">攻撃対象(プレイヤー)</param>
+    public virtual void Attack(IDamageable target)
+    {
+        //ここに基本的な攻撃の処理
+    }
+
+    /// <summary>
+    /// ボス固有の行動をするメソッド
+    /// </summary>
+    private void UniqueActions()
+    {
+        //ここにボスのみがとる行動の処理を書く
+    }
+
+    /// <summary>
+    /// 敵が生存しているかの判定を行うメソッド
+    /// </summary>
+    /// <returns>true：生存してる false：死んでいる</returns>
+    public virtual bool IsAlive()
+    {
+        return _isAlive;
+    }
 }
