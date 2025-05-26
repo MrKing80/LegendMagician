@@ -10,9 +10,11 @@ public class DataBaseManager : MonoBehaviour
 {
     public static DataBaseManager Instance { get; private set; }
 
+    // データベース
     private EnemyDataBase _enemyDataBase = default;
     private SkillDataBase _skillDataBase = default;
-
+    
+    // 定数
     private const string _enemyDataBaseName = "EnemyDataBase";
     private const string _skillDataBaseName = "SkillDataBase";
 

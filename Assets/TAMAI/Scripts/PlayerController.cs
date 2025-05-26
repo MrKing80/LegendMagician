@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 /// <summary>
 /// プレイヤークラスを管理するクラス
@@ -38,7 +37,10 @@ public class PlayerController : MonoBehaviour, IAttackable
         _attackPower = _playerStatus.AttackPower;
         _attackSpeed = _playerStatus.AttackSpeed;
         _moveSpeed = _playerStatus.MoveSpeed;
+
+        // 移動処理
         _playerMove = new PlayerMove(_moveSpeed, _rb);
+        
         _baceAttribute = new FireAttack("炎");
     }
 
