@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 /// <summary>
@@ -7,9 +9,12 @@ using UnityEngine;
 /// </summary>
 public class PlayerController : MonoBehaviour, IAttackable
 {
-    [SerializeField, Header("ステータス")] private PlayerStatus _playerStatus = default;
+    [SerializeField, Header("ステータス")]
+    private PlayerStatus _playerStatus = default;
+
     private PlayerMove _playerMove = default;
     private BaceAttribute _baceAttribute = default;
+    private EnemyManager _enemyManager = default;
 
     private Rigidbody _rb = default;
 
@@ -42,6 +47,9 @@ public class PlayerController : MonoBehaviour, IAttackable
         _playerMove = new PlayerMove(_moveSpeed, _rb);
         
         _baceAttribute = new FireAttack("炎");
+
+        List<GameObject> enemys = _enemyManager.GetEnemies();
+        print($"{enemys.Count}");
     }
 
     private void FixedUpdate()
