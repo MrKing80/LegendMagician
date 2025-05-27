@@ -1008,7 +1008,7 @@ PrefabInstance:
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: _wait
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
@@ -1018,7 +1018,7 @@ PrefabInstance:
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: _maxDistance
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
