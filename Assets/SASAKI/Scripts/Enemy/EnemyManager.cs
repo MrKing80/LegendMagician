@@ -11,7 +11,7 @@ public class EnemyManager : MonoBehaviour
     private GameObject[] _enemyObjects = default;               // タグで取得した敵オブジェクト配列
     private float _waitSecond = 1f;                             // 一定時間待機するための秒数
 
-    void Start()
+    private void Awake()
     {
         _enemyObjects = GameObject.FindGameObjectsWithTag("Enemy"); // シーン内の "Enemy" タグのオブジェクトをすべて取得
     }

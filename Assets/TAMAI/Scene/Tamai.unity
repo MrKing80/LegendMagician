@@ -464,7 +464,7 @@ PrefabInstance:
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
@@ -514,7 +514,12 @@ PrefabInstance:
     - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_Name
-      value: EnemyTest (1)
+      value: R
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -607,7 +612,7 @@ PrefabInstance:
     - target: {fileID: 4641992573588584080, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: _enemyID
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4641992573588584080, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
@@ -623,7 +628,7 @@ PrefabInstance:
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
@@ -673,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_Name
-      value: EnemyTest (2)
+      value: L
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1002,6 +1007,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
+      propertyPath: _wait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _isAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _maxDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _enemyManager
+      value: 
+      objectReference: {fileID: 887687112}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
       propertyPath: _playerStatus._moveSpeed
       value: 10
       objectReference: {fileID: 0}
@@ -1023,6 +1048,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2644395881537111057, guid: 17032565a8f83cc4f8a9431e06cedac8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4641992573588584080, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: _enemyID
@@ -1052,7 +1082,7 @@ PrefabInstance:
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
@@ -1092,7 +1122,12 @@ PrefabInstance:
     - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_Name
-      value: EnemyTest
+      value: M
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
