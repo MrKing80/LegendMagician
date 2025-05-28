@@ -942,6 +942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataBaseManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8660428081568995860, guid: 088774f5d51f82b4198fd472e93cf61d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1054,6 +1059,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5875442464208267206, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875442464208267206, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
@@ -1143,6 +1153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8154450976315516008, guid: 17032565a8f83cc4f8a9431e06cedac8,
+        type: 3}
       propertyPath: m_Name
       value: M
       objectReference: {fileID: 0}
@@ -1165,9 +1180,9 @@ SceneRoots:
   - {fileID: 3797250230872709923}
   - {fileID: 676870545}
   - {fileID: 1784947647}
-  - {fileID: 207508479}
-  - {fileID: 2004701405544145199}
   - {fileID: 6717395035319774625}
   - {fileID: 1238469390}
   - {fileID: 1648077365}
+  - {fileID: 2004701405544145199}
   - {fileID: 887687113}
+  - {fileID: 207508479}

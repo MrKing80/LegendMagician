@@ -10,8 +10,8 @@ using UnityEngine;
 public static class HierarchyActiveCheck
 {
     private const int WIDTH = 16;
+    private const string PLAYER_TAG = "Player";
     private const string ENEMY_TAG = "Enemy";
-    private const string PATH = "Editor/CustomIcons/";
 
     // staticコンストラクタ。ヒエラルキーのアイテムを描画する時に呼ばれる
     static HierarchyActiveCheck()
@@ -32,14 +32,27 @@ public static class HierarchyActiveCheck
         }
 
         // タグがエネミーのときだけ
-        if(gameObject.CompareTag(ENEMY_TAG))
+        if (gameObject.CompareTag(ENEMY_TAG))
         {
-            Texture2D icon = (Texture2D)EditorGUIUtility.Load(PATH + "EnemyIcon.png");
+            Texture2D icon = (Texture2D)EditorGUIUtility.Load("CustomIcons/EnemyIcon.png");
 
             if (icon != null) 
             {
                 // アイコンの場所を確保
-                Rect iconRect = new Rect(selectionRect.x - 2, selectionRect.y, 16, 16);
+                Rect iconRect = new Rect(selectionRect.x, selectionRect.y, 16, 16);
+                // アイコンを描写
+                GUI.DrawTexture(iconRect, icon);
+            }
+        }
+
+        if (gameObject.CompareTag(PLAYER_TAG))
+        {
+            Texture2D icon = (Texture2D)EditorGUIUtility.Load("CustomIcons/PlayerIcon.png");
+
+            if (icon != null)
+            {
+                // アイコンの場所を確保
+                Rect iconRect = new Rect(selectionRect.x, selectionRect.y, 16, 16);
                 // アイコンを描写
                 GUI.DrawTexture(iconRect, icon);
             }
