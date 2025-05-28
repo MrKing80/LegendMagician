@@ -17,13 +17,19 @@ public class PlayerController : MonoBehaviour, IAttackable
     [SerializeField, Header("ステータス")]
     private PlayerStatus _playerStatus = default;
 
-    [SerializeField, Header("攻撃処理を走らせるか"), Space]
+    [SerializeField, Header("攻撃エフェクト"), Space]
+    private List<GameObject> _attackEffects = new();
+
+    [SerializeField, Header("攻撃エフェクト"), Range(0, 4)]
+    private int _attackIndex = 0;
+
+    [SerializeField, Header("攻撃処理を走らせるか")]
     private bool _isAttack = true;
 
-    [SerializeField, Header("探索距離"), Space]
+    [SerializeField, Header("探索距離")]
     private float _maxDistance = 0f;
 
-    [SerializeField, Header("一番近い敵を更新する際の待機時間"), Space]
+    [SerializeField, Header("一番近い敵を更新する際の待機時間")]
     private float _wait = 1f;
 
     private PlayerMove _playerMove = default;
@@ -65,7 +71,10 @@ public class PlayerController : MonoBehaviour, IAttackable
 
         // 移動処理取得
         _playerMove = new PlayerMove(_moveSpeed, _rb);
-        
+
+        // 子オブジェクトとして生成
+        Instantiate(_attackEffects[_attackIndex], this.transform.position, Quaternion.identity, this.transform);
+
         _baceAttribute = new FireAttack("炎");
 
         // エネミーリストを取得
@@ -99,6 +108,11 @@ public class PlayerController : MonoBehaviour, IAttackable
 
         Debug.Log($"{_baceAttribute.AttributeName}魔法発動！");
 
+    }
+
+    public Vector3 GetEnemy()
+    {
+        return _enemyDistance;
     }
 
     #region コルーチン

@@ -781,7 +781,7 @@ public class HS_WhiteMageController : MonoBehaviour
         {
             //You can use desiredMoveDirection if using InputMagnitude instead of Horizontal&Vertical axis
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forward), desiredRotationSpeed);
-            //Limit back speed
+            //Limit back _speed
             if (InputZ < -0.5)
                 controller.Move(desiredMoveDirection * Time.deltaTime * (velocity / 1.5f));
             //else if (InputX < -0.1 || InputX > 0.1)

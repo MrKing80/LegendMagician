@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class UIController : MonoBehaviour {
 
@@ -16,7 +19,25 @@ public class UIController : MonoBehaviour {
     private List<Transform> lt;
     private int activeNumber = 0;
 
-	void Start () {
+    void Start()
+    {
+#if ENABLE_INPUT_SYSTEM
+        // Check for Standalone Input Module and replace it with Input System UI Input Module
+        var standaloneInputModule = FindFirstObjectByType<UnityEngine.EventSystems.StandaloneInputModule>();
+        if (standaloneInputModule != null)
+        {
+            Debug.Log("Replacing Standalone Input Module with Input System UI Input Module.");
+            var eventSystemGameObject = standaloneInputModule.gameObject;
+            Destroy(standaloneInputModule);
+            var inputSystemUIModule = eventSystemGameObject.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+        }
+#endif
+
+        if (prefabHolder == null)
+        {
+            Debug.LogError("PrefabHolder is not assigned.");
+            return;
+        }
 
         lt = new List<Transform>();
         prefabs = prefabHolder.GetComponentsInChildren<Transform>(true);
@@ -78,22 +99,61 @@ public class UIController : MonoBehaviour {
 
     public void SetDay()
     {
-        directionalLight.enabled = true;
-        reflectionProbe.RenderProbe();
-        RenderSettings.skybox = daySkyboxMaterial;
+        if (directionalLight != null)
+        {
+            directionalLight.enabled = true;
+        }
+        if (reflectionProbe != null)
+        {
+            reflectionProbe.RenderProbe();
+        }
+        if (daySkyboxMaterial != null)
+        {
+            RenderSettings.skybox = daySkyboxMaterial;
+        }
     }
 
     public void SetNight()
     {
-        directionalLight.enabled = false;
-        reflectionProbe.RenderProbe();
-        RenderSettings.skybox = nightSkyboxMaterial;
+        if (directionalLight != null)
+        {
+            directionalLight.enabled = false;
+        }
+        if (reflectionProbe != null)
+        {
+            reflectionProbe.RenderProbe();
+        }
+        if (nightSkyboxMaterial != null)
+        {
+            RenderSettings.skybox = nightSkyboxMaterial;
+        }
     }
-
 
     // TEMP
     private void Update()
     {
+        #if ENABLE_INPUT_SYSTEM
+        var keyboard = UnityEngine.InputSystem.Keyboard.current;
+        if (keyboard != null)
+        {
+            if (keyboard.qKey.wasPressedThisFrame)
+            {
+                SetDay();
+            }
+            if (keyboard.eKey.wasPressedThisFrame)
+            {
+                SetNight();
+            }
+            if (keyboard.aKey.wasPressedThisFrame)
+            {
+                ChangeEffect(true);
+            }
+            if (keyboard.dKey.wasPressedThisFrame)
+            {
+                ChangeEffect(false);
+            }
+        }
+        #else
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SetDay();
@@ -110,5 +170,6 @@ public class UIController : MonoBehaviour {
         {
             ChangeEffect(false);
         }
+        #endif
     }
 }

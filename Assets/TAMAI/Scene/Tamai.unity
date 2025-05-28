@@ -460,7 +460,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 32c3ca46238cc614dbb494728f97c085, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b410b69062667143b9b739cdd8b7d61, type: 2}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -624,7 +624,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 32c3ca46238cc614dbb494728f97c085, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b410b69062667143b9b739cdd8b7d61, type: 2}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1008,11 +1008,16 @@ PrefabInstance:
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: _wait
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: _isAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _attackIndex
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
@@ -1030,6 +1035,23 @@ PrefabInstance:
       propertyPath: _playerStatus._moveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _attackEffects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: '_attackEffects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1804594651676422, guid: 1b0d1f412269d6942b37fe88592ebf50,
+        type: 3}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: '_attackEffects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1203268971673872, guid: fff93d2bdef826b45a5fc5cabf4b1157,
+        type: 3}
     - target: {fileID: 5875442464208267206, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: m_Name
@@ -1068,7 +1090,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 32c3ca46238cc614dbb494728f97c085, type: 2}
+      objectReference: {fileID: 2100000, guid: 5b410b69062667143b9b739cdd8b7d61, type: 2}
     - target: {fileID: 8026602665768470769, guid: 17032565a8f83cc4f8a9431e06cedac8,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class MetaAudioController : MonoBehaviour
 {
@@ -36,7 +39,21 @@ public class MetaAudioController : MonoBehaviour
 
     void Update()
     {
+#if ENABLE_INPUT_SYSTEM
+        var mouse = UnityEngine.InputSystem.Mouse.current;
+        if (mouse != null)
+        {
+            if (mouse.leftButton.isPressed)
+            {
+                globalProgress = 1f;
+            }
 
+            if (mouse.leftButton.wasPressedThisFrame || mouse.rightButton.wasPressedThisFrame)
+            {
+                Instantiate(waveSfxPrefabs[Random.Range(0, waveSfxPrefabs.Length)], transform.position, transform.rotation);
+            }
+        }
+#else
         if (Input.GetMouseButton(0))
         {
             globalProgress = 1f;
@@ -46,6 +63,7 @@ public class MetaAudioController : MonoBehaviour
         {
             Instantiate(waveSfxPrefabs[Random.Range(0, waveSfxPrefabs.Length)], transform.position, transform.rotation);
         }
+        #endif
 
         if (globalProgress >= 0f)
         {
@@ -53,6 +71,5 @@ public class MetaAudioController : MonoBehaviour
         }
 
         loopingSFX.volume = globalProgress;
-
     }
 }

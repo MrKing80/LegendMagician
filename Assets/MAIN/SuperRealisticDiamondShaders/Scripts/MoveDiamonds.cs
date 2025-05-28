@@ -29,7 +29,7 @@ public class MoveDiamonds : MonoBehaviour
         
 
 
-      //  GetComponent<Rigidbody>().AddTorque.transform.Rotate(Vector3(0, speed, 0));
+      //  GetComponent<Rigidbody>().AddTorque.transform.Rotate(Vector3(0, _speed, 0));
 
         if (transform.position.y < -MaxDistance * 0.3)
         {
