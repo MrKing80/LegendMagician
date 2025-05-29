@@ -15,7 +15,7 @@ public class PlayerStatus
     [SerializeField, Header("攻撃力")] private float _attackPower = 0f;
     [SerializeField, Header("攻撃スピード")] private float _attackSpeed = 0f;
     [SerializeField, Header("移動スピード")] private float _moveSpeed = 0f;
-
+    private BaseAttribute _attribute = default;
     // ラムダ式でプロパティを設定
     public string Name
     {
@@ -45,5 +45,11 @@ public class PlayerStatus
     {
         get => _moveSpeed;
         set => _moveSpeed = value;
+    }
+
+    public BaseAttribute Attribute
+    {
+        get => _attribute; 
+        set => _attribute = value;
     }
 }

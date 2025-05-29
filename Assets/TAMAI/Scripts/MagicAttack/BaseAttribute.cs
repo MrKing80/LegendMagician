@@ -1,11 +1,11 @@
 using UnityEngine;
 
 /// <summary>
-/// スキルデータクラス
-/// 制作者：玉井
+/// 属性のベースクラス
+/// 作成者:佐々木
 /// </summary>
-[CreateAssetMenu]
-public class SkillData : ScriptableObject
+[System.Serializable]
+public class BaseAttribute : ScriptableObject
 {
     [SerializeField, Header("アイコン")] private Sprite _icon = default;
     [SerializeField, Header("属性のスクリプト")] private BaseAttribute _attribute = default;
@@ -16,4 +16,19 @@ public class SkillData : ScriptableObject
     public BaseAttribute Attribute => _attribute;
     public int Id => _id;
     public string Name => _name;
+
+    public BaseAttribute()
+    {
+
+    }
+
+    /// <summary>
+    /// 属性が持つ特性の処理を行うメソッド
+    /// TODO : 継承先で属性が持つ特性の処理を記述してね
+    /// </summary>
+    public virtual void AttributeCharacteristics()
+    {
+
+    }
+
 }

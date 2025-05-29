@@ -99,7 +99,7 @@ public class DataBaseManager : MonoBehaviour
     /// </summary>
     /// <param name="id">データベース内でのID</param>
     /// <returns>指定したスキルデータを返す</returns>
-    public SkillData GetSkillData(int id)
+    public BaseAttribute GetSkillData(int id)
     {
         return _skillDataBase._skillDatas[id];
     }

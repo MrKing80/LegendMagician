@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -33,7 +34,6 @@ public class PlayerController : MonoBehaviour, IAttackable
     private float _wait = 1f;
 
     private PlayerMove _playerMove = default;
-    private BaceAttribute _baceAttribute = default;
 
     private Rigidbody _rb = default;
 
@@ -75,12 +75,13 @@ public class PlayerController : MonoBehaviour, IAttackable
         // 子オブジェクトとして生成
         Instantiate(_attackEffects[_attackIndex], this.transform.position, Quaternion.identity, this.transform);
 
-        _baceAttribute = new FireAttack("炎");
 
         // エネミーリストを取得
         _enemys = _enemyManager.GetEnemies();
 
         StartCoroutine(NearestEnemy());
+
+        _playerStatus.Attribute = new FireAttack();
 
     }
 
@@ -105,9 +106,7 @@ public class PlayerController : MonoBehaviour, IAttackable
         // 殴る処理　未
         //一番近い敵を探索 〆
         //一番近い敵に一定間隔で攻撃→コルーチン　できる
-
-        Debug.Log($"{_baceAttribute.AttributeName}魔法発動！");
-
+        target.TakeDamage((int)_attackPower);
     }
 
     public Vector3 GetEnemy()
@@ -122,13 +121,23 @@ public class PlayerController : MonoBehaviour, IAttackable
     /// </summary>
     private IEnumerator NearestEnemy()
     {
+        // isAttackがtureになるまでの間処理を止める 
+        yield return new WaitUntil(() => _isAttack);
+
         // アタック処理がtrueの場合
         while (_isAttack == true)
         {
             // 敵がいない場合はスルー
             if (_enemys.Count == 0)
+            {
+                // 指定時間待機 
+                yield return new WaitForSeconds(_attackSpeed);
+                print($"{_attackSpeed}秒毎に更新！");
+              
                 continue;
-                
+
+            }
+
             // 一番近い敵
             GameObject targetEmemy = default;
 
@@ -149,7 +158,9 @@ public class PlayerController : MonoBehaviour, IAttackable
 
                 // maxDistanceの方が小さかったらスルー
                 if (maxDistance <= targetDistance)
+                {
                     continue;
+                }
 
                 // 距離がmaxDistance以下だったら、更新する
                 maxDistance = targetDistance;
@@ -160,14 +171,20 @@ public class PlayerController : MonoBehaviour, IAttackable
             }
             print($"{targetEmemy}と自分との残り距離は{maxDistance / maxDistance}mです");
 
+            //ここでエフェクトを出して、いふして攻撃
             // 一番近い敵のダメージ処理を呼び出し、攻撃する
             IDamageable attackTarget = targetEmemy.GetComponent<IDamageable>();
             Attack(attackTarget);
 
             // 指定時間待機 
-            yield return new WaitForSeconds(_wait);
-            print($"{_wait}秒毎に更新！");
+            yield return new WaitForSeconds(_attackSpeed);
+            print($"{_attackSpeed}秒毎に更新！");
+
         }
+
+        print("コルーチンスタート");
+        StartCoroutine(NearestEnemy());
+
     }
     #endregion
 

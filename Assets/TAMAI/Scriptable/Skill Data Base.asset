@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Skill Data Base
   m_EditorClassIdentifier: 
   _skillDatas:
-  - {fileID: 11400000, guid: 2d5de5b09428275498e582d4a13be7ab, type: 2}
-  - {fileID: 11400000, guid: 1f3e36037ff82ce46a03e004f4cbf652, type: 2}
-  - {fileID: 11400000, guid: 4e598dc4e186a0847a2b2dbec8a3131e, type: 2}
-  - {fileID: 11400000, guid: 342a8964ca63bac4c85b70405eae78c7, type: 2}
-  - {fileID: 11400000, guid: 160c3fb3fb827874fabf8587792c81f0, type: 2}
-  - {fileID: 11400000, guid: e6cc0f32394f1534f9828981c583796a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0a3476523ff266a488c93e78b38cbf34, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}

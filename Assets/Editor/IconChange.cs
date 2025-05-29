@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 // ScriptableIconクラスに対応したカスタムInspectorを作る宣言
-[CustomEditor(typeof(SkillData))]
+[CustomEditor(typeof(BaseAttribute))]
 // エディタ上での見た目や動作をカスタマイズするためのクラス
 public class IconChange : Editor
 {
@@ -21,7 +21,7 @@ public class IconChange : Editor
      )
     {
         // 編集対象のオブジェクトをScriptableIcon型に変換
-        SkillData obj = target as SkillData;
+        BaseAttribute obj = target as BaseAttribute;
         // ScriptableIconクラス内のicon変数を取得
         Sprite icon = obj.Icon;
 
