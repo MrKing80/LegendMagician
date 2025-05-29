@@ -3,18 +3,20 @@ using UnityEngine;
 
 /// <summary>
 /// ヒエラルキーにアクティブ状態を切り替えるトグルを表示する拡張機能
+/// ヒエラルキーにあるエネミーやプレイヤーオブジェクトにアイコンを追加する
 /// </summary>
 
 // [InitializeOnLoad]はエディタが起動またはコンパイルされた時に、このクラスを自動で呼び出す命令
 [InitializeOnLoad]
-public static class HierarchyActiveCheck
+public static class HierarchyEditor
 {
     private const int WIDTH = 16;
+    private const int LEFT_WIDTH = 26;
     private const string PLAYER_TAG = "Player";
     private const string ENEMY_TAG = "Enemy";
 
     // staticコンストラクタ。ヒエラルキーのアイテムを描画する時に呼ばれる
-    static HierarchyActiveCheck()
+    static HierarchyEditor()
     {
         EditorApplication.hierarchyWindowItemOnGUI += OnGUI;
     }
@@ -39,7 +41,7 @@ public static class HierarchyActiveCheck
             if (icon != null) 
             {
                 // アイコンの場所を確保
-                Rect iconRect = new Rect(selectionRect.x, selectionRect.y, 16, 16);
+                Rect iconRect = new Rect(selectionRect.x - LEFT_WIDTH, selectionRect.y, 16, 16);
                 // アイコンを描写
                 GUI.DrawTexture(iconRect, icon);
             }
@@ -52,7 +54,7 @@ public static class HierarchyActiveCheck
             if (icon != null)
             {
                 // アイコンの場所を確保
-                Rect iconRect = new Rect(selectionRect.x, selectionRect.y, 16, 16);
+                Rect iconRect = new Rect(selectionRect.x - LEFT_WIDTH, selectionRect.y, 16, 16);
                 // アイコンを描写
                 GUI.DrawTexture(iconRect, icon);
             }
