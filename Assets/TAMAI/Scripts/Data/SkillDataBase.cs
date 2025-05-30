@@ -8,5 +8,5 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SkillDataBase : ScriptableObject
 {
-    public List<SkillData> _skillDatas = new List<SkillData>();
+    public List<BaseAttribute> _skillDatas = new List<BaseAttribute>();
 }

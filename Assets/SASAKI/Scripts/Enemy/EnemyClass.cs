@@ -7,6 +7,21 @@ public class EnemyClass : BossEnemyClass
 {
 
     /// <summary>
+    /// 主に初期化処理、インスタンス生成をするメソッド
+    /// </summary>
+    private void Awake()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+
+        _enemyData = _enemyDataBase._enemyDatas[_enemyID];
+
+        _maxHp = _currentHp = _enemyData.HP;
+
+        _enemyMove = new EnemyMove(_enemyData.MoveSpeed, _player);
+    }
+
+
+    /// <summary>
     /// ダメージを受ける処理
     /// </summary>
     /// <param name="damage">受けるダメージ量</param>
@@ -14,6 +29,7 @@ public class EnemyClass : BossEnemyClass
     {
         //ここにダメージを受ける処理
         _currentHp -= damage;
+        print($"{this.gameObject}の残りHPは{_currentHp}です。");
     }
 
     /// <summary>

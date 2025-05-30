@@ -1776,7 +1776,7 @@ PrefabInstance:
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
       propertyPath: _wait
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
@@ -1807,6 +1807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _attackEffects.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
+        type: 3}
+      propertyPath: _playerStatus._attackSpeed
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5449168789386237534, guid: b3c681e9c4fe87c42bf686cebd3a231c,
         type: 3}
