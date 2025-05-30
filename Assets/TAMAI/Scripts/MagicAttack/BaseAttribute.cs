@@ -26,7 +26,7 @@ public class BaseAttribute : ScriptableObject
     /// 属性が持つ特性の処理を行うメソッド
     /// TODO : 継承先で属性が持つ特性の処理を記述してね
     /// </summary>
-    public virtual void AttributeCharacteristics()
+    public virtual void AttributeCharacteristics(GameObject enemy)
     {
 
     }

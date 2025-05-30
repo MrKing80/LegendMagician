@@ -13,7 +13,7 @@ public class DarkAttack : BaseAttribute
         //ここにこのスクリプトの初期化処理を書こう
     }
 
-    public override void AttributeCharacteristics()
+    public override void AttributeCharacteristics(GameObject enemy)
     {
         //TODO : 周囲を引き寄せる処理を書く
         //TODO : HPを吸収する処理を書く

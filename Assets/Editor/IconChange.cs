@@ -3,8 +3,13 @@ using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 
+/// <summary>
+/// 制作者：玉井
+/// </summary>
+
 // ScriptableIconクラスに対応したカスタムInspectorを作る宣言
-[CustomEditor(typeof(BaseAttribute))]
+// 第二引数にtrueを入れると、該当クラスを継承した子クラスも適用される
+[CustomEditor(typeof(BaseAttribute), true)]
 // エディタ上での見た目や動作をカスタマイズするためのクラス
 public class IconChange : Editor
 {

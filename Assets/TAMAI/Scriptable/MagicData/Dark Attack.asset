@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bed8e5a5a3ddb4a9dc6187c0268da3, type: 3}
   m_Name: Dark Attack
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
-  _attribute: {fileID: 0}
+  _icon: {fileID: 21300000, guid: a76c9d253d34eb645a9433488a0bb4d4, type: 3}
+  _attribute: {fileID: 11400000}
   _id: 0
-  _name: 
+  _name: "\u95C7"

@@ -13,7 +13,7 @@ public class WindwAttack : BaseAttribute
         //ここにこのスクリプトの初期化処理を書こう
     }
 
-    public override void AttributeCharacteristics()
+    public override void AttributeCharacteristics(GameObject enemy)
     {
         //TODO : ノックバックの処理を書く
         //TODO : 防御無視の計算をする処理を書く

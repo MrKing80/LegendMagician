@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 /// <summary>
 /// プレイヤークラスを管理するクラス
@@ -101,12 +102,13 @@ public class PlayerController : MonoBehaviour, IAttackable
     /// 自動攻撃
     /// </summary>
     /// <param name="target">一番近い敵</param>
-    public void Attack(IDamageable target)
+    public void Attack(IDamageable attackTarget)
     {
         // 殴る処理　未
         //一番近い敵を探索 〆
         //一番近い敵に一定間隔で攻撃→コルーチン　できる
-        target.TakeDamage((int)_attackPower);
+
+        attackTarget.TakeDamage((int)_attackPower);
     }
 
     public Vector3 GetEnemy()
@@ -174,7 +176,10 @@ public class PlayerController : MonoBehaviour, IAttackable
             //ここでエフェクトを出して、いふして攻撃
             // 一番近い敵のダメージ処理を呼び出し、攻撃する
             IDamageable attackTarget = targetEmemy.GetComponent<IDamageable>();
+
             Attack(attackTarget);
+            // プレイヤーが所持している属性の追加効果
+            _playerStatus.Attribute.AttributeCharacteristics(targetEmemy);
 
             // 指定時間待機 
             yield return new WaitForSeconds(_attackSpeed);

@@ -13,7 +13,7 @@ public class LightningAttack : BaseAttribute
         //ここにこのスクリプトの初期化処理を書こう
     }
 
-    public override void AttributeCharacteristics()
+    public override void AttributeCharacteristics(GameObject enemy)
     {
         //TODO : スタンの処理を書く
         //TODO : 周囲に感電する処理を書く
